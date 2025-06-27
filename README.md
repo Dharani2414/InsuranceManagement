@@ -2,34 +2,17 @@
 
 ## 📌 Overview
 
-The **Insurance Management System** is a console-based application developed in **C# (.NET Core)**. It showcases a hybrid data-access strategy using:
+The **Insurance Management System** is a **console-based application** built using **C# (.NET Core)**.  
+It showcases a **hybrid data-access strategy** using:
 
 - **ADO.NET** for **User-related operations**
-- **Entity Framework Core (EF Core)** and **ADO.NET** for **Policy-related operations**
+- **Entity Framework Core (EF Core)** for **Policy creation**
+- **ADO.NET** for **Policy viewing and assignments**
 
-This solution demonstrates a modular structure and combines raw SQL access with modern ORM approaches.
+This approach provides both low-level control and high-level ORM benefits within a modular design.
 
 ---
 
-## 🗂️ Project Structure
-
-```plaintext
-InsuranceManagement/
-│
-├── DAO/                # Data access layer using ADO.NET and EF Core
-│
-├── Entity/             # EF Core entity classes (e.g., Policy, PolicyType)
-│
-├── InsuranceManagement/ # Main application logic (Program.cs, Menu, Services)
-│
-├── MyExceptions/       # Custom exception handling
-│
-├── Util/               # Utility classes (e.g., DB connection, config reader)
-│
-├── packages/           # NuGet packages (auto-managed)
-│
-└── InsuranceManagement.sln  # Visual Studio solution file
----
 ## ✅ Features
 
 ### 👤 User Module (ADO.NET)
@@ -38,7 +21,21 @@ InsuranceManagement/
 - View All Users  
 
 ### 📄 Policy Module (Hybrid)
-- Create Policy (EF Core)  
-- View Policies (ADO.NET)  
+- Create Policy (**EF Core**)  
+- View Policies (**ADO.NET**)  
 - Assign Policy to User  
-- Filter/Sort Policies 
+- Filter/Sort Policies  
+
+---
+
+## 🗂️ Project Structure 
+
+InsuranceManagement/
+│
+├── DAO/                    # ADO.NET and EF Core Repositories
+├── Entity/                 # Entity Framework Core models (Policy, PolicyType, etc.)
+├── InsuranceManagement/    # Main console application logic
+├── MyExceptions/           # Custom exception classes
+├── Util/                   # Utility and config classes (e.g., DB connection)
+├── packages/               # NuGet packages folder (auto-managed)
+└── InsuranceManagement.sln # Visual Studio solution file
