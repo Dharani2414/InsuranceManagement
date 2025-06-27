@@ -17,25 +17,28 @@ This solution demonstrates a modular structure and combines raw SQL access with 
 InsuranceManagement/
 │
 ├── DAO/                # Data access layer using ADO.NET and EF Core
+│
 ├── Entity/             # EF Core entity classes (e.g., Policy, PolicyType)
+│
 ├── InsuranceManagement/ # Main application logic (Program.cs, Menu, Services)
+│
 ├── MyExceptions/       # Custom exception handling
+│
 ├── Util/               # Utility classes (e.g., DB connection, config reader)
+│
 ├── packages/           # NuGet packages (auto-managed)
+│
 └── InsuranceManagement.sln  # Visual Studio solution file
-
 ---
+## ✅ Features
 
-**## ✅ Features**
-👤 User Module (ADO.NET)
-User Registration
-User Login
-View All Users
+### 👤 User Module (ADO.NET)
+- User Registration  
+- User Login  
+- View All Users  
 
----
-
-**📄 Policy Module (Hybrid)**
-Create Policy (EF Core)
-View Policies (ADO.NET)
-Assign Policy to User
-Filter/Sort Policies
+### 📄 Policy Module (Hybrid)
+- Create Policy (EF Core)  
+- View Policies (ADO.NET)  
+- Assign Policy to User  
+- Filter/Sort Policies 
